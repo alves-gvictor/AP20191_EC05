@@ -1,0 +1,82 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Veiculo;
+
+import java.sql.Date;
+
+/**
+ *
+ * @author Gabriel
+ */
+public class Vendas {
+    //Atributos
+    private Date data;
+    private double resultado;
+    private  int quantidadeDeVendas;
+    private double somaVendasMes;
+    private String transacao;
+    
+    //Metodos
+
+    public double getResultado() {
+        return resultado;
+    }
+
+    public void setResultado(double resultado) {
+        this.resultado = resultado;
+    }
+
+    public int getQuantidadeDeVendas() {
+        return quantidadeDeVendas;
+    }
+
+    public void setQuantidadeDeVendas(int quantidadeDeVendas) {
+        this.quantidadeDeVendas = quantidadeDeVendas;
+    }
+
+    public String getTransacao() {
+        return transacao;
+    }
+
+    public void setTransacao(String transacao) {
+        this.transacao = transacao;
+    }
+    
+
+    public Date getData() {
+        return data;
+    }
+
+    public void setData(Date data) {
+        this.data = data;
+    }
+
+    public double getSomaVendasMes() {
+        return somaVendasMes;
+    }
+
+    public void setSomaVendasMes(double somaVendasMes) {
+        this.somaVendasMes = somaVendasMes;
+    }
+
+    
+    public Vendas(int quantidadeDeVendas, String transacao, double somaVendasMes, double resultado) {
+        this.transacao = transacao;
+        this.quantidadeDeVendas = quantidadeDeVendas;
+        this.somaVendasMes = somaVendasMes;
+        this.resultado = resultado;
+        
+    }
+    public double CalcularVenda(){
+        resultado = quantidadeDeVendas * somaVendasMes;
+        return resultado;
+    }
+    
+
+    
+    
+    
+}
